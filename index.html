@@ -12,26 +12,28 @@
 <body>
     <div class="weather-app">
     <header>
-        <form>
-            <input type="search" placeholder="Enter a city.." required/>
-            <input type="submit" value="search"/>
+        <form class="search-form">
+            <input type="search" placeholder="Enter a city.." required class="search-input"/>
+            <input type="submit" value="search"class="search-button"/>
         </form>
     </header>
-    <div>
     <main>
-    <h1>Cape Town</h1>
-    <p>
+        <div class="weather-details"></div>
+        <div>
+    <h1 class="city">Cape Town</h1>
+    <p class="weather-data">
         Tuesday 14:39,Scattered Clouds
         <br />
-        Humidity:66%,Wind:3,33km/h
+        Humidity:<strong>66%</strong>,Wind:<strong>3,33km/h</strong>
     </p>
    </div>
-    <div>🌤️14℃</div>
+    <div class="temperature">🌤️14℃</div>
+   </div>
     </main>
     <footer>Created by 
-        <a href="https://github.com/Gire1"tagert=_blank>Grace Chifamba</a>, is
-        <a href="https://github.com/Gire1/My-first-weather-app"tagert=_blank>open-sourced on GitHub</a> and
-        <a href="https://gracie-app.netlify.app" tagert=_blank>hosted on Netlify</a>
+        <a href="https://github.com/Gire1"tagert=_blank>Grace Chifamba</a>open-sourced 
+        <a href="https://github.com/Gire1/My-first-weather-app"tagert=_blank>on GitHub</a> and hosted
+        <a href="https://gracie-app.netlify.app" tagert=_blank>on Netlify</a>
     </footer>
     </div>
 </body>
