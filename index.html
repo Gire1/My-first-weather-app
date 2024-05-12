@@ -12,19 +12,19 @@
 <body>
     <div class="weather-app">
     <header>
-        <form class="search-form">
-            <input type="search" placeholder="Enter a city.." required class="search-input"/>
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="Enter a city.." required id="search-input"class="search-input"/>
             <input type="submit" value="search"class="search-button"/>
         </form>
     </header>
     <main>
         <div class="weather-details">
         
-    <h1 class="city">CapeTown</h1>
+    <h1 class="city"id="city">CapeTown</h1>
     <p class="weather-data">
         Tuesday 14:39,Scattered Clouds
         <br />
-        Humidity:<strong>66%</strong>,Wind:<strong>3,33km/h</strong>
+        Humidity:<strong>66%</strong>,Wind:<strong>3.33km/h</strong>
     </p>
    
     <div class="temperature">
@@ -45,5 +45,6 @@
     </div>
 </div>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
