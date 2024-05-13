@@ -1,5 +1,5 @@
 body {
-  background: #222;
+  background: #28107e;
   font-family: "Roboto Mono", monospace;
 }
 .weather-app {
@@ -69,7 +69,7 @@ main{
 }
 .temperature-unit{
     font-size: 28px;
-    margin-top: -1px; 
+    margin-top: 6px; 
 
 
 }
@@ -78,7 +78,11 @@ main{
     
     
     
+}.temperature-details{
+    display: flex;
+    justify-content: space-between;
 }
+
 footer {
   height: 60px;
   text-align: center;
