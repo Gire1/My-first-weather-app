@@ -1,15 +1,35 @@
-function refreshWeather(response){
+function refreshWeather(response) {
   let temperatureElement=document.querySelector("#temperature");
   let temperature=response.data.temperature.current; 
   let cityElement=document.querySelector("#city");
+  let desciptionElement=document.querySelector("#description");
+  let humidityElement=document.querySelector("#humidity");
+  let windSpeedElement=document.querySelector("#wind-speed");
+  let timeElement=document.querySelector("#time");
+  let date=new Date(response.data.time * 1000);
 
   
-  cityElement.innerHTML=response.data.city; 
+  
+  
+  cityElement.innerHTML=response.data.city;
+  desciptionElement.innerHTML=response.data.condition.description;
+  humidityElement.innerHTML=`${response.data.temperature.humidity}%`;
+  windSpeedElement.innerHTML=`${response.data.wind.speed}km/h`;
+  timeElement.innerHTML=formatDate(date);
   temperatureElement.innerHTML=Math.round(temperature);
 }
 
-
-
+function formatDate(date){
+  let minutes=date.getminutes();
+  let hours=date.gethours();
+  let days=[
+    "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",];
+let day=days[date.getDay()];
+if (minutes<10);{
+   minutes=`0${minutes}`;
+}
+return `${day} ${hours}: ${minutes}`;
+}
 
 
 function searchCity(city){
@@ -22,15 +42,13 @@ function searchCity(city){
 function handleSearchSubmit(event){
     event.preventDefault();
     let searchInput=document.querySelector("#search-input");
-    let temperature = response.data.temperature.current;
-    let cityElement = document.querySelector("#city");
+    let cityElement=document.querySelector("#city");
+    cityElement.innerHTML=searchInput.value;
+    searchCity=(searchInput.value);
 
-
-    
-    searchCity(searchInput.value);
 }
-
-
 
 let searchFormElement=document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",handleSearchSubmit);
+
+searchCity=("CapeTown");
