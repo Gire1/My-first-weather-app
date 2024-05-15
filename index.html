@@ -11,29 +11,56 @@
  <title>Gracie Weather-app</title>
 </head>
 <body>
-    <div class="weather-app">
-    <header>
+  <div class="weather-app">
+      <header>
         <form class="search-form" id="search-form">
-            <input type="search" placeholder="Enter a city.." required id="search-input"class="search-input"/>
-            <input type="submit" value="search"class="search-button"/>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-input"
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
         </form>
-    </header>
-    <main>
+      </header>
+      <main>
         <div class="weather-details">
-     <div>
-    <h1 class="city"id="city"></h1>
-    <p class="weather-data">
-       <span id="time"></span> , <span id="description"></span>
-        <br />
-        Humidity:<strong id="humidity"></strong>,Wind:<strong id="wind-speed"></strong>
-    </p>
-    <div>
-    </div class="temperature-container">
-     <div id="icon"></div>
-       <span class="temperature-value"id="temperature">14</span>
-        <span class="temperature-unit">℃</span>
-     </div>
-    </div>
+          <div>
+            <h1 class="city" id="city"></h1>
+            <p class="weather-data">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong> Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="temperature-container">
+            <div id="icon"></div>
+            <div class="temperature-value" id="temperature"></div>
+            <div class="temperature-unit">°C</div>
+          </div>
+        </div> 
+        <div class="weather-forcast">
+          <div class="raw">
+            <div class="col-2">
+              <div class="weather-forcast-date">
+              Thu
+              </div>
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+              alt=""
+              width="42"
+              />
+              <div class="weather-forcast-temperature">
+              <span class="weather-forcast-temperature-max">
+              18°</span>/
+            <span class="weather-forcast-temperature-min">12°</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
     </main>
     <footer>Created by 
         <a href="https://github.com/Gire1"tagert=_blank>Grace Chifamba</a>open-sourced 
