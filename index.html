@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/index.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
- <title>Gracie Weather-app</title>
-</head>
-<body>
-  <div class="weather-app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Gracie Weather-app</title>
+  </head>
+  <body>
+    <div class="weather-app">
       <header>
         <form class="search-form" id="search-form">
           <input
@@ -29,7 +32,7 @@
           <div>
             <h1 class="city" id="city"></h1>
             <p class="weather-data">
-              <span id="time"></span>,
+              <span id="time"></span>
               <span id="description"></span>
               <br />
               Humidity: <strong id="humidity"></strong> Wind:
@@ -41,34 +44,22 @@
             <div class="temperature-value" id="temperature"></div>
             <div class="temperature-unit">°C</div>
           </div>
-        </div> 
-        <div class="weather-forcast">
-          <div class="raw">
-            <div class="col-2">
-              <div class="weather-forcast-date">
-              Thu
-              </div>
-              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-              alt=""
-              width="42"
-              />
-              <div class="weather-forcast-temperature">
-              <span class="weather-forcast-temperature-max">
-              18°</span>/
-            <span class="weather-forcast-temperature-min">12°</span>
-              </div>
-
-            </div>
-          </div>
         </div>
-    </main>
-    <footer>Created by 
-        <a href="https://github.com/Gire1"tagert=_blank>Grace Chifamba</a>open-sourced 
-        <a href="https://github.com/Gire1/My-first-weather-app"tagert=_blank>on GitHub</a> and hosted
-        <a href="https://gracie-app.netlify.app" tagert=_blank>on Netlify</a>
-     </footer>
+        <div class="weather-forecast" id="forecast"></div>
+       </main>
+
+      <footer>
+        Created by
+        <a href="https://github.com/Gire1" tagert="_blank">Grace Chifamba</a
+        >open-sourced
+        <a href="https://github.com/Gire1/My-first-weather-app" tagert="_blank"
+          >on GitHub</a
+        >
+        and hosted
+        <a href="https://gracie-app.netlify.app" tagert="_blank">on Netlify</a>
+      </footer>
     </div>
-   </div>
-  <script src="src/index.js"></script>
- </body>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>
