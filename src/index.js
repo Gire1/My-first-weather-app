@@ -17,6 +17,8 @@ function refreshWeather(response) {
   timeElement.innerHTML=formatDate(date);
   temperatureElement.innerHTML=Math.round(temperature);
   iconElement.innerHTML=`<img src="${response.data.condition.icon_url}"class="temperature-icon" />`;
+
+  getForecast(response.data.city);
 }   
    
 
@@ -34,7 +36,7 @@ function formatDate(date){
 let day=days[date.getDay()];
 
 if (minutes < 10);{
-   minutes=`0${minutes}`;
+   minutes=`0 ${minutes}`;
 }
 return `${day} ${hours}:${minutes}`;
 }
@@ -55,8 +57,18 @@ function handleSearchSubmit(event){
     searchCity(searchInput.value);
 
 }
+function getForecast(city){
+  let apiKey="3f5te44f20dc10969a23fb1a9afo8c90";
+  let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}$units=metric`;
+  axios(apiUrl).then(getForecast);
+  
+}
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data);
+
+
+
 let days=["Thu","Fri","Sat","Sun","Mon"];
 let forecastHtml ="";
 
@@ -66,7 +78,7 @@ days.forEach(function(day){
   `
     <div class="weather-forecast-day">
        <div class="weather-forecast-date">${day}</div>
-         <div class="wearther-forecast-icon">🌤️</div>
+         <div class="weather-forecast-icon">🌤️</div>
             <div class="weather-forecast-temperatures">
               <div class="weather-forecast-temperature"><strong>
               18°</strong>
@@ -84,7 +96,7 @@ forecastElement.innerHTML=forecastHtml;
 let searchFormElement=document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",handleSearchSubmit);
 
-searchCity("CapeTown");
-displayForecast();
+searchCity("Capetown");
+
 
 
