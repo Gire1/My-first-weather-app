@@ -1,5 +1,5 @@
 body {
-  background: #28107e;
+  background: white;
   font-family: "Roboto Mono", monospace;
 }
 .weather-app {
@@ -116,5 +116,5 @@ footer {
   font-size: 12px;
   font-weight: bold;
   margin-top: 20px;
-  
+
 }
